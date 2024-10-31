@@ -8,10 +8,16 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/css/lightbox.css"
+        integrity="sha512-DKdRaC0QGJ/kjx0U0TtJNCamKnN4l+wsMdION3GG0WVK6hIoJ1UPHRHeXNiGsXdrmq19JJxgIubb/Z7Og2qJww=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/reset.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.5/js/lightbox.min.js"
+        integrity="sha512-KbRFbjA5bwNan6DvPl1ODUolvTTZ/vckssnFhka5cG80JVa5zSlRPCr055xSgU/q6oMIGhZWLhcbgIC0fyw3RQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -129,16 +135,28 @@
         <h2 id="GALLERY" class="category"><img src="./images/gallery@2x.png" alt="GALLERY">
         </h2>
         <div class="GALLERY_image GALLERY_slider">
-            <div class="GALLERY_item"><img src="./images/pc_gallary_05-100.jpg" alt="客席の様子"></div>
-            <div class="GALLERY_item"> <img src="./images/pc_gallary_04-100.jpg" alt="コーヒー豆の写真"></div>
-            <div class="GALLERY_item GALLERY_item_sp"><img src="./images/pc_gallary_03-100.jpg" alt="店内の様子"></div>
-            <div class="GALLERY_item"><img src="./images/pc_gallary_02-100.jpg" alt="店の看板"></div>
-            <div class="GALLERY_item"><img src="./images/pc_gallary_01-100.jpg" alt="コーヒーを淹れている様子"></div>
-            <div class="GALLERY_item"><img src="./images/pc_gallary_05-100.jpg" alt="客席の様子"></div>
-            <div class="GALLERY_item"> <img src="./images/pc_gallary_04-100.jpg" alt="コーヒー豆の写真"></div>
-            <div class="GALLERY_item GALLERY_item_sp"><img src="./images/pc_gallary_03-100.jpg" alt="店内の様子"></div>
-            <div class="GALLERY_item"><img src="./images/pc_gallary_02-100.jpg" alt="店の看板"></div>
-            <div class="GALLERY_item"><img src="./images/pc_gallary_01-100.jpg" alt="コーヒーを淹れている様子"></div>
+            <div class="GALLERY_item"><a href="./images/pc_gallary_05-100.jpg" data-lightbox="GALLERY_image"
+                    data-title="GALLERY1"><img src="./images/pc_gallary_05-100.jpg" alt="客席の様子"></a></div>
+            <div class="GALLERY_item"><a href="./images/pc_gallary_04-100.jpg" data-lightbox="GALLERY_image"
+                    data-title="GALLERY2"><img src="./images/pc_gallary_04-100.jpg" alt="コーヒー豆の写真"></a></div>
+            <div class="GALLERY_item GALLERY_item_sp"><a href="./images/pc_gallary_03-100.jpg"
+                    data-lightbox="GALLERY_image" data-title="GALLERY3"><img src="./images/pc_gallary_03-100.jpg"
+                        alt="店内の様子"></a></div>
+            <div class="GALLERY_item"><a href="./images/pc_gallary_02-100.jpg" data-lightbox="GALLERY_image"
+                    data-title="GALLERY4"><img src="./images/pc_gallary_02-100.jpg" alt="店の看板"></a></div>
+            <div class="GALLERY_item"><a href="./images/pc_gallary_01-100.jpg" data-lightbox="GALLERY_image"
+                    data-title="GALLERY5"><img src="./images/pc_gallary_01-100.jpg" alt="コーヒーを淹れている様子"></a></div>
+            <div class="GALLERY_item"><a href="./images/pc_gallary_05-100.jpg" data-lightbox="GALLERY_image"
+                    data-title="GALLERY1"><img src="./images/pc_gallary_05-100.jpg" alt="客席の様子"></a></div>
+            <div class="GALLERY_item"><a href="./images/pc_gallary_04-100.jpg" data-lightbox="GALLERY_image"
+                    data-title="GALLERY2"><img src="./images/pc_gallary_04-100.jpg" alt="コーヒー豆の写真"></a></div>
+            <div class="GALLERY_item GALLERY_item_sp"><a href="./images/pc_gallary_03-100.jpg"
+                    data-lightbox="GALLERY_image" data-title="GALLERY3"><img src="./images/pc_gallary_03-100.jpg"
+                        alt="店内の様子"></a></div>
+            <div class="GALLERY_item"><a href="./images/pc_gallary_02-100.jpg" data-lightbox="GALLERY_image"
+                    data-title="GALLERY4"><img src="./images/pc_gallary_02-100.jpg" alt="店の看板"></a></div>
+            <div class="GALLERY_item"><a href="./images/pc_gallary_01-100.jpg" data-lightbox="GALLERY_image"
+                    data-title="GALLERY5"><img src="./images/pc_gallary_01-100.jpg" alt="コーヒーを淹れている様子"></a></div>
         </div>
     </section>
 
@@ -225,29 +243,18 @@
                 slidesToScroll: 1,
                 speed: 300,
                 responsive: [
+
                     {
-                        breakpoint: 1536,
-                        settings: {
-                            slidesToShow: 4,
-                            slidesToScroll: 1
-                        }
-                    },
-                    {
-                        breakpoint: 1152,
+                        // 768~960px
+                        breakpoint: 960,
                         settings: {
                             slidesToShow: 3,
                             slidesToScroll: 1
                         }
                     },
                     {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 1
-                        }
-                    },
-                    {
-                        breakpoint: 384,
+                        // ~767px
+                        breakpoint: 767,
                         settings: {
                             slidesToShow: 1,
                             slidesToScroll: 1,

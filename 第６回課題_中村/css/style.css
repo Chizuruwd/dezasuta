@@ -348,27 +348,30 @@ header {
 .GALLERY_item {
     width: 20%;
 }
-.GALLERY_item > img {
+.GALLERY_item img {
     width: 384px;
     object-fit: cover;
 }
 /* ~767px */
 @media screen and (max-width: 375px) {
-    .GALLERY_item {
+    .GALLERY_item img {
         display: none;
     }
     .GALLERY_item_sp {
         display: block;
         width: 100%;
     }
-    .GALLERY_item_sp > img {
+    .GALLERY_item_sp img {
         width: 100%;
         justify-content: center;
     }
 }
 /* スライダー */
-/* .GALLERY_slider img {
-    text-align: center;
+.GALLERY_slider {
+    margin: 0 auto;
+}
+/* .slick-list {
+    overflow: visible !important;
 } */
 .slick-next {
     right: 20%;
@@ -414,6 +417,13 @@ header {
         border-top: solid 2px #fff;
         border-right: solid 2px #fff;
     }
+    .GALLERY_item img {
+        width: 100%;
+    }
+}
+/* モーダルウィンドウ */
+.lb-number {
+    display: none !important;
 }
 
 /* EVENT */
@@ -437,7 +447,7 @@ header {
     bottom: 0;
     left: 0;
     margin: auto;
-    width: 68%;
+    width: fit-content;
     height: 119px;
     /* padding: 32px 0; */
 }
@@ -446,7 +456,7 @@ header {
     align-items: center;
     font-size: 23px;
     line-height: 1.96;
-    gap: 6%;
+    gap: 55px;
     /* padding: 0 16%; */
 }
 
@@ -466,6 +476,8 @@ header {
     .EVENT_list_wrap a {
         flex-direction: column;
         font-size: 16px;
+        gap: 0;
+        padding-bottom: 3px;
     }
     .EVENT_list_date {
         width: 100%;
